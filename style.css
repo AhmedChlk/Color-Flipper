@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #123456;
+}
+
+.nav-bar {
+    box-shadow: 0px 10px 6px -6px #333333;
+}
+
+.nav-bar ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    background-color: #f5f5f5;
+    font-size: 1.5rem;
+}
+
+.nav-bar li {
+    list-style: none;
+    font-weight: bold;
+    font-size: 2rem;
+    color: #2d2d2d;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.background-display {
+    border: solid #333333 1px;
+    border-radius: 5px;
+    font-size: 2rem;
+    padding: 1rem;
+    background-color: #f5f5f5;
+}
+
+@keyframes blink {
+    0%, 100% {
+        background-color: #f5f5f5;
+    }
+    50% {
+        background-color: #d5d5d5;
+    }
+}
+
+.buttons > button {
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    background-color: #f5f5f5;
+}
+
+.buttons > button:hover {
+    animation: blink 1.5s infinite; /* Animation de clignotement */
+}
+
+.buttons > button:active {
+    transform: scale(0.9);
+}
+
+.color-copie-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: space-between;
+    border: 1px solid rgb(132, 148, 162);
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    width: 10rem;
+    background-color: white;
+    z-index: 1000;
+}
+
+#color-copie-off {
+    height: 20px;
+    color: red;
+    border: none;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 1em;
+}
