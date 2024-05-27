@@ -68,7 +68,7 @@ main {
 }
 
 .buttons > button:hover {
-    animation: blink 1.5s infinite; /* Animation de clignotement */
+    animation: blink 1.5s infinite;
 }
 
 .buttons > button:active {
@@ -78,9 +78,9 @@ main {
 .color-copie-container {
     display: none;
     position: fixed;
-    top: 50%;
+    top: 20%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 50%);
     justify-content: space-between;
     border: 1px solid rgb(132, 148, 162);
     border-radius: 5px;
@@ -97,4 +97,13 @@ main {
     cursor: pointer;
     font-weight: bolder;
     font-size: 1em;
+}
+
+@media screen and (max-width: 780px){
+    .buttons{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+    }
 }
